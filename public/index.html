@@ -1,0 +1,49 @@
+<!--
+After settinup server by installing node js and express as explained in 
+server.js wwe are going to setup angular js in html file:
+1- go to angluarjs.org -> download ->copy the text next to CDN
+and open a script just before closing the body tag and paste the link in that script (as below)
+Now we can use angular js with our app
+2- to test angular js type in ng-app and call your app as myApp in html tag:
+ <input ng-model="test">  -> this means calling an angular model
+	{{test}} -> this means two way binding which angular connect output to input
+3- call bootstrap to style your html. FOr this just copy first two paragraph of below link:
+	getbootstrap.com -> getting started -> bootstarp CDN part
+-->
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<title>Contact List app</title>
+</head>
+<body>
+	<!-- Below div surround our entire layout and we call container class for it.
+	Now i is time to create an angular controlller wich controls the entire layout.
+	ng-controller= "our controller file name".
+	In order to introduce the controller file to html we use ab script and define the folder and file of our controller
+	We can have as many controller as we want but we need to call the in the relevant html-->
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Contac list app</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>name</th>
+					<th>email</th>
+					<th>number</th>
+				</tr>
+			</thead>
+		</table>
+
+	</div>
+<!-- 	<input ng-model="test">
+	{{test}}-->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script src="controllers/controller.js"></script>
+
+</body>
+</html>
